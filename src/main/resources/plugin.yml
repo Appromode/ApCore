@@ -1,0 +1,76 @@
+name: ApCore
+author: Appromode
+version: 1.0
+api-version: 1.13
+main: com.appromode.core.Initialise
+description: Core plugin utils
+commands:
+    ap:
+        usage: Syntax error! Perhaps you meant /<command>
+        description: Core command        
+        aliases: [approci, approcore, acore, ac]
+    help:
+        usage: Syntax error! Perhaps you meant /<command>
+        description: Help command
+        aliases: [aphelp, aph, ahelp, approh]
+permissions:
+    apcore.*:
+        default: false
+        description: all permissions
+        children:
+            apcore.all: true
+    apcore.all:
+        default: false
+        description: all permissions internal
+        children:
+            apcore.menu.*: true
+            apcore.reload: true
+    apcore.menu.*:
+        default: false
+        description: all menu permissions
+        children:
+            apcore.menu.h: true
+            apcore.menu.a: true
+            apcore.staff: true
+            apcore.retired: true
+            apcore.helper: true
+            apcore.moderator: true
+            apcore.administrator: true
+            apcore.senior: true
+            apcore.manager: true
+            apcore.executive: true
+    apcore.menu.h:
+        default: false
+        description: Help menu
+    apcore.menu.a:
+        default: false
+        description: Admin menu
+    apcore.staff:
+        default: false
+        description: Staff menu
+    apcore.retired:
+        default: false
+        description: Retired staff menu
+    apcore.helper:
+        default: false
+        description: Helper staff menu
+    apcore.moderator:
+        default: false
+        description: Moderator staff menu
+    apcore.administrator:
+        default: false
+        description: Administrator staff menu
+    apcore.senior:
+        default: false
+        description: Senior staff menu
+    apcore.manager:
+        default: false
+        description: Manager staff menu
+    apcore.executive:
+        default: false
+        description: Executive staff menu
+    apcore.reload:
+        default: false
+        description: Reload plugin
+        
+        
